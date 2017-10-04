@@ -6,7 +6,6 @@ from os.path import join, isfile
 def thing():
 	with open('data.txt', 'w+', encoding='utf_8') as f:
 		for k in data:
-			k.whitelist_ips(['192.168.0.201', '192.168.0.101', '24.40.136.85'])
 			for j in k.get_foreign_requests():
 				f.write(j + '\n')
 
@@ -14,7 +13,6 @@ def thing():
 def thing2():
 	with open('data.txt', 'w+', encoding='utf_8') as f:
 		for k in data:
-			k.whitelist_ips(['192.168.0.201', '192.168.0.101', '24.40.136.85'])
 			for j in k.get_bad_requests():
 				f.write(j + '\n')
 
